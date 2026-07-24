@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baghdadi Dawakhana — Admin Panel</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ===== LOGIN ===== -->
+<div id="login-view" class="login-view">
+  <form id="login-form" class="login-card">
+    <div class="login-logo"><i class="fa-solid fa-mortar-pestle"></i></div>
+    <h1>Baghdadi Dawakhana</h1>
+    <p class="login-sub">Admin Panel — sign in to manage your website</p>
+    <label for="login-pass">Password</label>
+    <input type="password" id="login-pass" placeholder="Enter admin password" autocomplete="current-password" required>
+    <button type="submit" class="btn btn-primary btn-block">Sign In <i class="fa-solid fa-arrow-right"></i></button>
+    <p class="login-error" id="login-error" hidden></p>
+  </form>
+</div>
+
+<!-- ===== APP ===== -->
+<div id="app-view" class="app-view" hidden>
+  <aside class="admin-sidebar">
+    <div class="admin-brand"><i class="fa-solid fa-mortar-pestle"></i> <span>Dawakhana Admin</span></div>
+    <nav class="admin-nav" id="admin-nav">
+      <button data-tab="dashboard" class="active"><i class="fa-solid fa-gauge-high"></i> Dashboard</button>
+      <button data-tab="settings"><i class="fa-solid fa-gear"></i> Site Settings</button>
+      <button data-tab="sections"><i class="fa-solid fa-toggle-on"></i> Sections</button>
+      <button data-tab="hero"><i class="fa-solid fa-star"></i> Hero</button>
+      <button data-tab="about"><i class="fa-solid fa-book-open"></i> About</button>
+      <button data-tab="whyMarquee"><i class="fa-solid fa-bolt"></i> Trust Marquee</button>
+      <button data-tab="services"><i class="fa-solid fa-stethoscope"></i> Services</button>
+      <button data-tab="products"><i class="fa-solid fa-bag-shopping"></i> Products</button>
+      <button data-tab="testimonials"><i class="fa-solid fa-quote-right"></i> Testimonials</button>
+      <button data-tab="booking"><i class="fa-regular fa-calendar-check"></i> Booking</button>
+      <button data-tab="contact"><i class="fa-solid fa-location-dot"></i> Contact</button>
+      <button data-tab="footer"><i class="fa-solid fa-shoe-prints"></i> Footer</button>
+      <button data-tab="media"><i class="fa-solid fa-images"></i> Media Library</button>
+    </nav>
+    <div class="admin-sidebar-foot">
+      <a href="/" target="_blank" class="admin-viewsite"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Website</a>
+      <button id="logout-btn" class="admin-logout"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <button class="admin-menu-toggle" id="admin-menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <h2 id="admin-title">Dashboard</h2>
+      <div class="admin-topbar-actions">
+        <span class="admin-saved" id="admin-saved" hidden><i class="fa-solid fa-circle-check"></i> Saved</span>
+        <button class="btn btn-primary" id="save-btn"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+      </div>
+    </header>
+    <div class="admin-content" id="admin-content"><!-- editor renders here --></div>
+  </main>
+</div>
+
+<!-- Hidden file input for uploads -->
+<input type="file" id="upload-input" accept="image/*" hidden>
+
+<div id="admin-toast" class="admin-toast" hidden></div>
+
+<script src="admin.js"></script>
+</body>
+</html>

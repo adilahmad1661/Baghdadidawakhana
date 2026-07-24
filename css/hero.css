@@ -1,0 +1,230 @@
+/* ==========================================================================
+   HERO — "Benefits of Choosing Homeopathy" botanical layout
+   ========================================================================== */
+
+#hero {
+  position: relative;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 3.5rem;
+  background: var(--grad-hero);
+  overflow: hidden;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+  z-index: 2;
+}
+
+/* ---- Leaf mark ---- */
+.hero-leaf-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--emerald-50);
+  color: var(--emerald-600);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* ---- Headline treatment ---- */
+.hero-kicker {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  color: var(--ink-800);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.hero-mega {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(3rem, 1.5rem + 6.5vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+  color: var(--emerald-700);
+  text-transform: uppercase;
+  margin: 0.1rem 0 0.2rem;
+}
+.hero-for {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  color: var(--ink-600);
+  margin: 0.5rem 0 1rem;
+}
+.hero-for-line {
+  height: 2px;
+  flex: 1;
+  max-width: 90px;
+  background: var(--ink-200);
+}
+.hero-for-text {
+  flex: 0 0 auto;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.hero-banner {
+  display: inline-block;
+  background: var(--grad-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 0.9rem + 1.9vw, 2.15rem);
+  padding: 0.55rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glow-emerald);
+  letter-spacing: -0.01em;
+}
+
+/* ---- Icon badges row ---- */
+.hero-badges {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1.25rem);
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+.hero-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  flex: 1;
+  min-width: 84px;
+}
+.hero-badge-ring {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px; height: 62px;
+  border-radius: 50%;
+  border: 2px solid var(--emerald-200);
+  background: #fff;
+  color: var(--emerald-600);
+  font-size: 1.35rem;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--dur-base) var(--ease-out-quart), border-color var(--dur-base) ease, background var(--dur-base) ease, color var(--dur-base) ease;
+}
+.hero-badge:hover .hero-badge-ring {
+  transform: translateY(-4px);
+  background: var(--grad-primary);
+  border-color: transparent;
+  color: #fff;
+}
+.hero-badge > span {
+  font-family: var(--font-button);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  color: var(--ink-700);
+  line-height: 1.25;
+}
+
+/* ---- Tagline pill ---- */
+.hero-tagline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  padding: 0.5rem 1.35rem 0.5rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--emerald-100);
+  color: var(--emerald-800);
+  font-family: var(--font-button);
+  font-weight: 700;
+  font-size: var(--text-base);
+  letter-spacing: 0.01em;
+}
+.hero-tagline-leaf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* ---- CTAs ---- */
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* ---- Hero visual ---- */
+.hero-visual { position: relative; height: 100%; min-height: 420px; display: flex; align-items: center; justify-content: center; }
+.hero-image-frame {
+  position: relative;
+  width: min(460px, 100%);
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 6px solid rgba(255,255,255,0.8);
+}
+.hero-image-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-round-badge {
+  position: absolute;
+  bottom: 4%; right: -2%;
+  width: 128px; height: 128px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  text-align: center;
+  box-shadow: var(--shadow-glow-emerald);
+  z-index: 3;
+  border: 4px solid var(--warm-white);
+}
+.hero-round-badge i { font-size: 1.4rem; color: var(--gold-400); }
+.hero-round-badge span { font-family: var(--font-button); font-weight: 700; font-size: var(--text-xs); line-height: 1.25; }
+
+/* Floating natural elements */
+.hero-float-shape {
+  position: absolute;
+  font-size: 1.8rem;
+  color: var(--emerald-400);
+  opacity: 0.8;
+  filter: drop-shadow(0 8px 14px rgba(24,146,103,0.25));
+  z-index: 3;
+}
+.hero-float-shape.shape-1 { top: 2%; left: 2%; font-size: 2rem; color: var(--gold-500); }
+.hero-float-shape.shape-2 { top: 8%; right: 4%; font-size: 1.6rem; color: var(--teal-400); }
+
+/* Bottom wave */
+.hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; z-index: 1; color: var(--warm-white); }
+
+@media (max-width: 1080px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-leaf-mark { margin-inline: auto; }
+  .hero-for { justify-content: center; }
+  .hero-badges, .hero-cta-row { justify-content: center; margin-inline: auto; }
+  .hero-tagline-pill { margin-inline: auto; }
+  .hero-visual { min-height: 380px; margin-top: 2.5rem; }
+}
+@media (max-width: 560px) {
+  #hero { padding-top: 6.5rem; }
+  .hero-badges { gap: 0.4rem; }
+  .hero-badge { min-width: 60px; }
+  .hero-badge-ring { width: 52px; height: 52px; font-size: 1.1rem; }
+  .hero-round-badge { width: 100px; height: 100px; }
+}

@@ -1,0 +1,46 @@
+/* ==========================================================================
+   APPOINTMENT BOOKING
+   ========================================================================== */
+
+.booking-panel {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+.booking-intro {
+  background: var(--grad-primary);
+  color: #fff;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.booking-intro .eyebrow { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #fff; }
+.booking-intro .section-title { color: #fff; }
+.booking-intro .section-sub { color: rgba(255,255,255,0.85); }
+.booking-perks { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 2rem; }
+.booking-perks li { display: flex; align-items: center; gap: 0.7rem; font-size: var(--text-sm); }
+.booking-perks i { color: var(--gold-400); }
+.booking-contact-card {
+  margin-top: 2.5rem;
+  display: flex; align-items: center; gap: 1rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+}
+.booking-contact-card i { font-size: 1.4rem; color: var(--gold-400); }
+.booking-contact-card strong { display: block; font-size: var(--text-sm); }
+.booking-contact-card span { font-size: var(--text-base); font-weight: 700; }
+
+.booking-form { padding: clamp(2rem, 4vw, 3.5rem); display: flex; flex-direction: column; gap: 1.25rem; }
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.booking-form .field textarea { min-height: 90px; }
+
+@media (max-width: 1080px) {
+  .booking-panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .booking-grid { grid-template-columns: 1fr; }
+}

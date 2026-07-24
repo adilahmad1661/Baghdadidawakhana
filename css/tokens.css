@@ -1,0 +1,145 @@
+/* ==========================================================================
+   BAGHDADI DAWAKHANA — DESIGN TOKENS
+   Premium homeopathic clinic & store design system
+   ========================================================================== */
+
+:root {
+  /* ---- Color: Emerald (Primary) ---- */
+  --emerald-900: #0A3B2C;
+  --emerald-800: #0D4F3A;
+  --emerald-700: #106247;
+  --emerald-600: #147856;
+  --emerald-500: #189267;   /* primary */
+  --emerald-400: #2FAB80;
+  --emerald-300: #6FC9A4;
+  --emerald-200: #A8E0C4;
+  --emerald-100: #DBF3E6;
+  --emerald-50:  #F1FBF6;
+
+  /* ---- Color: Teal (Secondary) ---- */
+  --teal-700: #0A5560;
+  --teal-600: #0D6B77;
+  --teal-500: #12838F;
+  --teal-400: #2FA0AB;
+  --teal-300: #7EC5CC;
+  --teal-100: #DCF3F5;
+  --teal-50:  #F1FAFB;
+
+  /* ---- Color: Golden Yellow (Accent) ---- */
+  --gold-700: #A6740E;
+  --gold-600: #C68F16;
+  --gold-500: #EEAC2E;   /* accent */
+  --gold-400: #F5C158;
+  --gold-300: #F9D48B;
+  --gold-100: #FCEAC2;
+  --gold-50:  #FDF6E7;
+
+  /* ---- Color: Soft Orange (Support) ---- */
+  --orange-600: #C9622A;
+  --orange-500: #EE7B3E;
+  --orange-400: #F49A67;
+  --orange-100: #FCE3D3;
+  --orange-50:  #FDF0E7;
+
+  /* ---- Neutrals / Warm White / Ink ---- */
+  --warm-white: #FFFCF6;
+  --cream: #FBF6EC;
+  --cream-deep: #F5EEDD;
+  --glass-white: rgba(255, 255, 255, 0.62);
+  --glass-white-strong: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --mint-light: #EAF9F1;
+
+  --ink-950: #08150F;
+  --ink-900: #0D1F18;
+  --ink-800: #14302459;
+  --ink-700: #24473A;
+  --ink-600: #375D4D;
+  --ink-500: #557567;
+  --ink-400: #7C978A;
+  --ink-300: #A9BEB3;
+  --ink-200: #D2E1D9;
+  --ink-100: #E9F1EC;
+
+  /* ---- Gradients ---- */
+  --grad-primary: linear-gradient(135deg, var(--emerald-600) 0%, var(--teal-600) 100%);
+  --grad-primary-soft: linear-gradient(135deg, var(--emerald-100) 0%, var(--teal-100) 100%);
+  --grad-gold: linear-gradient(135deg, var(--gold-500) 0%, var(--orange-500) 100%);
+  --grad-gold-soft: linear-gradient(135deg, var(--gold-100) 0%, var(--orange-100) 100%);
+  --grad-mint: linear-gradient(180deg, var(--mint-light) 0%, var(--warm-white) 100%);
+  --grad-hero: radial-gradient(120% 120% at 15% 0%, var(--emerald-50) 0%, var(--warm-white) 45%, var(--gold-50) 100%);
+  --grad-dark: linear-gradient(160deg, var(--ink-950) 0%, #0F2A20 55%, #0A3B2C 100%);
+  --grad-text: linear-gradient(135deg, var(--emerald-600), var(--teal-500) 55%, var(--gold-500));
+
+  /* ---- Typography ---- */
+  --font-heading: 'Poppins', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-button: 'Manrope', -apple-system, sans-serif;
+
+  --text-xs:   clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
+  --text-sm:   clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg:   clamp(1.125rem, 1.07rem + 0.25vw, 1.25rem);
+  --text-xl:   clamp(1.25rem, 1.17rem + 0.35vw, 1.5rem);
+  --text-2xl:  clamp(1.5rem, 1.38rem + 0.55vw, 1.875rem);
+  --text-3xl:  clamp(1.875rem, 1.68rem + 0.9vw, 2.375rem);
+  --text-4xl:  clamp(2.25rem, 1.95rem + 1.4vw, 3rem);
+  --text-5xl:  clamp(2.75rem, 2.25rem + 2.2vw, 3.875rem);
+  --text-6xl:  clamp(3.25rem, 2.5rem + 3.4vw, 5rem);
+  --text-7xl:  clamp(3.25rem, 2.5rem + 3.2vw, 5.25rem);
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-normal: 1.55;
+  --lh-relaxed: 1.75;
+
+  /* ---- Spacing (4px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  --section-pad-y: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+  --container-w: 1280px;
+  --container-pad: clamp(1.25rem, 1rem + 2vw, 3rem);
+
+  /* ---- Radius ---- */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+  --radius-full: 999px;
+
+  /* ---- Shadows ---- */
+  --shadow-xs: 0 2px 8px rgba(13, 47, 36, 0.06);
+  --shadow-sm: 0 6px 16px rgba(13, 47, 36, 0.08);
+  --shadow-md: 0 12px 32px rgba(13, 47, 36, 0.10);
+  --shadow-lg: 0 24px 60px rgba(13, 47, 36, 0.14);
+  --shadow-xl: 0 40px 90px rgba(13, 47, 36, 0.18);
+  --shadow-glow-emerald: 0 0 0 1px rgba(24, 146, 103, 0.12), 0 20px 50px rgba(24, 146, 103, 0.25);
+  --shadow-glow-gold: 0 0 0 1px rgba(238, 172, 46, 0.15), 0 20px 50px rgba(238, 172, 46, 0.3);
+  --shadow-glass: 0 8px 32px rgba(13, 47, 36, 0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+
+  /* ---- Motion ---- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.4s;
+  --dur-slow: 0.7s;
+
+  /* ---- Z-index scale ---- */
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}

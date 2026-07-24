@@ -1,0 +1,116 @@
+/* ==========================================================================
+   ANIMATIONS — keyframes, reveal utilities, loader, cursor, progress
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Float / drift ---- */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-18px) rotate(var(--r, 0deg)); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(-14px) translateX(8px); }
+  66% { transform: translateY(10px) translateX(-6px); }
+}
+.float-el { animation: float-y 6s ease-in-out infinite; }
+.float-el.delay-1 { animation-delay: 0.8s; }
+.float-el.delay-2 { animation-delay: 1.6s; }
+.float-el.delay-3 { animation-delay: 2.4s; }
+
+/* ---- Blob morph background ---- */
+@keyframes blob-morph {
+  0%, 100% { border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%; }
+  33% { border-radius: 62% 38% 40% 60% / 55% 65% 35% 45%; }
+  66% { border-radius: 35% 65% 55% 45% / 65% 35% 65% 35%; }
+}
+.blob { animation: blob-morph 12s ease-in-out infinite; }
+
+/* ---- Pulse glow (trust badges, CTAs) ---- */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(24,146,103,0.35); }
+  50% { box-shadow: 0 0 0 14px rgba(24,146,103,0); }
+}
+.pulse-glow { animation: pulse-glow 2.4s ease-out infinite; }
+
+/* ---- Spin (loader ring, sparkle) ---- */
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.spin-slow { animation: spin-slow 18s linear infinite; }
+
+/* ---- Marquee ---- */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee-x 28s linear infinite; }
+
+/* ---- Reveal-on-scroll base state (JS/AOS toggles .in-view) ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo); }
+.reveal-scale.in-view { opacity: 1; transform: scale(1); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo); }
+.reveal-left.in-view { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo); }
+.reveal-right.in-view { opacity: 1; transform: translateX(0); }
+
+/* ---- Scroll progress bar ---- */
+#scroll-progress {
+  position: fixed; top: 0; left: 0;
+  height: 3px; width: 0%;
+  background: var(--grad-gold);
+  z-index: calc(var(--z-nav) + 1);
+  transition: width 0.1s linear;
+}
+
+/* ---- Back to top ---- */
+#back-to-top {
+  position: fixed;
+  bottom: 6.5rem; right: 1.5rem;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-glow-emerald);
+  opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: all var(--dur-base) var(--ease-out-quart);
+  z-index: 90;
+  border: none;
+}
+#back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+#back-to-top:hover { transform: translateY(-4px); }
+
+/* ---- Floating WhatsApp ---- */
+#whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.65rem;
+  box-shadow: 0 14px 34px rgba(37,211,102,0.45);
+  z-index: 91;
+  transition: transform var(--dur-fast) var(--ease-out-quart);
+}
+#whatsapp-float:hover { transform: scale(1.08); }
+
+/* ---- Particle canvas ---- */
+#particles-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+/* ---- Counter number ---- */
+.counter-num { font-variant-numeric: tabular-nums; }

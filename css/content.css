@@ -1,0 +1,39 @@
+/* ==========================================================================
+   CONTENT — testimonials (one-line marquee)
+   ========================================================================== */
+
+.google-rating-row { display: flex; align-items: center; justify-content: center; gap: 0.6rem; margin-top: 1rem; font-size: var(--text-sm); }
+.google-rating-row i.fa-google { color: #4285F4; font-size: 1.1rem; }
+.google-rating-row strong { font-family: var(--font-heading); font-size: var(--text-lg); color: var(--ink-950); }
+
+.testimonial-marquee-wrap {
+  overflow: hidden;
+  margin-top: 2.5rem;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.testimonial-marquee {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  padding-inline: var(--container-pad);
+  animation-duration: 42s;
+}
+.testimonial-marquee:hover { animation-play-state: paused; }
+
+.testimonial-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  width: 340px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 0.85rem;
+}
+.testimonial-card p { color: var(--ink-700); line-height: var(--lh-normal); font-size: var(--text-sm); }
+.testimonial-person { display: flex; align-items: center; gap: 0.6rem; }
+.testimonial-person strong { display: block; font-size: var(--text-sm); }
+.testimonial-person span { font-size: var(--text-xs); color: var(--ink-500); }
+
+@media (max-width: 640px) {
+  .testimonial-card { width: 280px; padding: 1.25rem; }
+}
